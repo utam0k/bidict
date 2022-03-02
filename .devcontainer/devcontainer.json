@@ -6,12 +6,14 @@
         "dockerfile": "Dockerfile",
         "context": "..",
         "args": {
+            // Note: Check ./Dockerfile for the values it's using for these args:
+
             // Update 'VARIANT' to pick a Python version: 3, 3.10, 3.9, 3.8, 3.7, 3.6
-            // Append -bullseye or -buster to pin to an OS version.
-            // Use -bullseye variants on local on arm64/Apple Silicon.
+            // Note: If on arm64/Apple Silicon, must use -bullseye variant.
             "VARIANT": "3.10-bullseye",
+
             // Options
-            "NODE_VERSION": "lts/*"
+            "NODE_VERSION": "none"
         }
     },
     // Set *default* container specific settings.json values on container create.
